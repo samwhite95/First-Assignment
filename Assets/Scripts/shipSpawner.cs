@@ -7,6 +7,7 @@ public class shipSpawner : MonoBehaviour {
     public float spawnRate;
     float lastSpawn = 0;
     public GameObject enemy;
+    public GameObject enemy2;
     public GameObject healthBar;
     public Text enemyText;
     public int maxShips;
@@ -48,7 +49,18 @@ public class shipSpawner : MonoBehaviour {
 
     void wave2()
     {
-
+        if ((Time.time > spawnRate + lastSpawn) && counter <= maxShips)
+        {
+            Instantiate(enemy2, transform.position, transform.rotation);
+            lastSpawn = Time.time;
+            counter++;
+            currentShips++;
+            if (currentShips == 0)
+            {
+                waveNum++;
+            }
+        }
+        //wave2 logic
     }
 
 
