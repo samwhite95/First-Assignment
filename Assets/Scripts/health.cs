@@ -27,9 +27,8 @@ public class health : MonoBehaviour {
         StartCoroutine(flashRed());
         if(HP == 0)
         {
-			transform.Find("spawner").GetComponent<shipSpawner>().currentShips--; //finds the spawner object, accesses the counter for the current enemy count, and decrements it
             Destroy(transform.parent.gameObject);
-            
+            transform.Find("spawner").GetComponent<shipSpawner>().currentShips--; //finds the spawner object, accesses the counter for the current enemy count, and decrements it
 
         }
     }
