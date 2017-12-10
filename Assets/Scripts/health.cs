@@ -22,18 +22,24 @@ public class health : MonoBehaviour {
 
 	}
 
-	public void takeDamage()
+	public void takeDamage(int amount)
     {
-        HP -= 1;
+        HP -= amount;
         StartCoroutine(flashRed());
-        if(HP == 0)
+        if(HP <= 0)
         {
             //transform.Find("spawner").GetComponent<shipSpawner>().currentShips--; //finds the spawner object, accesses the counter for the current enemy count, and decrements it
-            if(spawner != null)
+            if (gameObject.layer == LayerMask.NameToLayer("enemy"))
             {
-                spawner.GetComponent<shipSpawner>().currentShips--;
+                if (spawner != null)
+                {
+                    spawner.GetComponent<shipSpawner>().currentShips--;
+                }
+                Destroy(transform.parent.gameObject);
             }
-            Destroy(transform.parent.gameObject);
+
+            
+            Destroy(gameObject);
              
 
         }

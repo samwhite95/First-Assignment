@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61063733154232122}
   - component: {fileID: 50990680501766168}
   - component: {fileID: 114243702390123210}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4554974239270064}
   - component: {fileID: 114786924175383298}
   - component: {fileID: 222472528955799130}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: EnemyPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 8220585740371884164, guid: 0000000000000000d000000000000000, type: 0}

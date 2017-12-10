@@ -24,4 +24,9 @@ public class enemyBulletLogic : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.GetComponent<health>().takeDamage(10);
+    }
 }

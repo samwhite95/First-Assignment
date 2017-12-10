@@ -523,9 +523,10 @@ GameObject:
   - component: {fileID: 1684857325}
   - component: {fileID: 1684857324}
   - component: {fileID: 1684857326}
+  - component: {fileID: 1684857327}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -646,16 +647,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.10774044, y: -0.04562938}
+    - - {x: 0.10633045, y: -0.047039416}
       - {x: 0.06686776, y: -0.04741949}
-      - {x: 0.015917743, y: 0.14219514}
-      - {x: -0.012824207, y: 0.14000003}
-      - {x: -0.06689357, y: -0.04621277}
-      - {x: -0.114722766, y: -0.047144573}
-      - {x: -0.2009371, y: -0.14748384}
-      - {x: -0.19999999, y: -0.19999999}
-      - {x: 0.19999999, y: -0.19999999}
-      - {x: 0.2009371, y: -0.15559681}
+      - {x: 0.015917743, y: 0.14078522}
+      - {x: -0.014234216, y: 0.14141007}
+      - {x: -0.05843353, y: -0.04621277}
+      - {x: -0.107672766, y: -0.048554614}
+      - {x: -0.18965709, y: -0.16158384}
+      - {x: -0.18872, y: -0.18872008}
+      - {x: 0.19858995, y: -0.18872008}
+      - {x: 0.19106711, y: -0.15700684}
+--- !u!114 &1684857327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1684857321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05414e836e25074fae5d2afacabe6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  flashTimer: 1
 --- !u!1 &1811565639
 GameObject:
   m_ObjectHideFlags: 0
