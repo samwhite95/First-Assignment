@@ -38,8 +38,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4554974239270064}
-  - component: {fileID: 114786924175383298}
   - component: {fileID: 222472528955799130}
+  - component: {fileID: 114273927878941522}
   m_Layer: 9
   m_Name: 2EnemyPrefab
   m_TagString: Untagged
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444029067614292}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.7700005, y: 7.970001, z: 0}
+  m_LocalPosition: {x: -1.3852041, y: -0.07326937, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4768106627265512}
@@ -67,13 +67,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1004330482552132}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4554974239270064}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 180}
 --- !u!50 &50990680501766168
 Rigidbody2D:
   serializedVersion: 4
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   flashTimer: 1
---- !u!114 &114786924175383298
+--- !u!114 &114273927878941522
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -140,16 +140,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1444029067614292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00a4f5af76a7c6e429f21cfd2365b4df, type: 3}
+  m_Script: {fileID: 11500000, guid: 74d7646c1b44af345b6f757895babf96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireSpeed: 1
-  projectile: {fileID: 1549279993717792, guid: b736f85ee6168f14fa79e606f66b8479, type: 2}
-  ship: {fileID: 1004330482552132}
-  entranceSpeed: 2
-  patrolSpeed: 6
-  currentHP: 100
-  damageText: {fileID: 0}
+  flyspeed: 5
 --- !u!212 &212219820286053262
 SpriteRenderer:
   m_ObjectHideFlags: 1
