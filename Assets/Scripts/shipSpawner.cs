@@ -4,22 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class shipSpawner : MonoBehaviour {
-    public float spawnRate;
+    
     float lastSpawn = 0;
     public GameObject enemy;
     public GameObject enemy2;
     public Text enemyText;
-    int counter = 0;
+    
     public int currentShips = 0;
     public int waveNum;
 
     public int maxShips;
+    public int counter = 0;
+    public float spawnRate;
 
     public int maxShips2;
+    public int counter2 = 0;
+    public float spawnRate2;
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -39,20 +42,20 @@ public class shipSpawner : MonoBehaviour {
         
 	}
 
-    void spawnShips(GameObject ship, int max)
+    void spawnShips(GameObject ship, int max, float rate, ref int count)
     {
-        if ((Time.time > spawnRate + lastSpawn) && counter <= max)
+        if ((Time.time > rate + lastSpawn) && count <= max)
         {
             Instantiate(ship, transform.position, transform.rotation);
             lastSpawn = Time.time;
-            counter++;
+            count++;
             currentShips++;
         }
     }
 
     void wave1()
     {
-        spawnShips(enemy, maxShips);
+        spawnShips(enemy, maxShips, spawnRate, ref counter);
 
         if (currentShips == 0 && counter > 0)
         {
@@ -63,7 +66,7 @@ public class shipSpawner : MonoBehaviour {
 
     void wave2()
     {
-        spawnShips(enemy2, maxShips2);
+        spawnShips(enemy2, maxShips2, spawnRate2, ref counter2);
 
         if (currentShips == 0 && counter > 0)
         {

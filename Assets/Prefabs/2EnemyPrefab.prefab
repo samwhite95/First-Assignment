@@ -143,7 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d7646c1b44af345b6f757895babf96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyspeed: 5
+  flyspeed: 7
+  fireSpeed: 1
+  projectile: {fileID: 1549279993717792, guid: b736f85ee6168f14fa79e606f66b8479, type: 2}
 --- !u!212 &212219820286053262
 SpriteRenderer:
   m_ObjectHideFlags: 1
