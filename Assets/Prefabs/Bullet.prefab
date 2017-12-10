@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 50435705209280454}
   - component: {fileID: 114738843266914158}
   - component: {fileID: 58272296278233670}
-  m_Layer: 10
+  - component: {fileID: 95635875566213658}
+  m_Layer: 9
   m_Name: Bullet
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -38,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1549279993717792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,6 +79,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.02
+--- !u!95 &95635875566213658
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549279993717792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e85d862ef82c8c64aadc5ac069a24090, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114738843266914158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,7 +141,7 @@ SpriteRenderer:
   m_SortingLayerID: 1901809973
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ea4f453a1ea5ed54b92e02c86f7c5277, type: 3}
+  m_Sprite: {fileID: 21300000, guid: caa07a017431edc43866c47b6f37a5bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
