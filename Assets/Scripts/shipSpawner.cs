@@ -7,12 +7,12 @@ public class shipSpawner : MonoBehaviour {
     public float spawnRate;
     float lastSpawn = 0;
     public GameObject enemy;
-    public GameObject healthBar;
+    public GameObject enemy2;
     public Text enemyText;
     public int maxShips;
     int counter = 0;
     public int currentShips = 0;
-    int waveNum = 1;
+    public int waveNum;
 
 	// Use this for initialization
 	void Start () {
@@ -27,28 +27,45 @@ public class shipSpawner : MonoBehaviour {
             case 1:
                 wave1();
                 break;
+
+            case 2:
+                wave2();
+                break;
         }
         
 	}
 
-    void wave1()
+    void spawnShips(GameObject ship)
     {
         if ((Time.time > spawnRate + lastSpawn) && counter <= maxShips)
         {
-            Instantiate(enemy, transform.position, transform.rotation);
+            Instantiate(ship, transform.position, transform.rotation);
             lastSpawn = Time.time;
             counter++;
             currentShips++;
-            if(currentShips == 0)
-            {
-                waveNum++;
-            }
+        }
+    }
+
+    void wave1()
+    {
+        spawnShips(enemy);
+
+        if (currentShips == 0 && counter > 0)
+        {
+            waveNum++;
+            counter = 0;
         }
     }
 
     void wave2()
     {
+        spawnShips(enemy2);
 
+        if (currentShips == 0 && counter > 0)
+        {
+            waveNum++;
+            counter = 0;
+        }
     }
 
 
