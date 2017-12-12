@@ -21,6 +21,8 @@ public class shipSpawner : MonoBehaviour {
     public int counter2 = 0;
     public float spawnRate2;
 
+    bool swapships = false;
+
     // Use this for initialization
     void Start () {
 		
@@ -38,6 +40,10 @@ public class shipSpawner : MonoBehaviour {
             case 2:
                 wave2();
                 break;
+
+            case 3:
+                wave3();
+                break;
         }
         
 	}
@@ -50,6 +56,7 @@ public class shipSpawner : MonoBehaviour {
             lastSpawn = Time.time;
             count++;
             currentShips++;
+            swapships = !swapships;
         }
     }
 
@@ -68,9 +75,27 @@ public class shipSpawner : MonoBehaviour {
     {
         spawnShips(enemy2, maxShips2, spawnRate2, ref counter2);
 
-        if (currentShips == 0 && counter > 0)
+        if (currentShips == 0 && counter2 > 0)
         {
             waveNum++;
+            counter2 = 0;
+        }
+    }
+
+    void wave3()
+    {
+        if(!swapships)
+        {
+            spawnShips(enemy, maxShips, spawnRate, ref counter);
+        }
+        if(swapships)
+        {
+            spawnShips(enemy2, maxShips2, spawnRate2, ref counter2);
+        }
+        if (currentShips == 0 && counter2 > 0)
+        {
+            waveNum++;
+            counter2 = 0;
             counter = 0;
         }
     }
