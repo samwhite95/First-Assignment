@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114150580750670472}
   - component: {fileID: 95737463345246228}
   m_Layer: 11
-  m_Name: EnemyBullet
+  m_Name: 2enemybull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 300
-  damage: 7
+  damage: 10
 --- !u!212 &212345168480214102
 SpriteRenderer:
   m_ObjectHideFlags: 1

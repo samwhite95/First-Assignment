@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c05414e836e25074fae5d2afacabe6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 10
+  HP: 6
   flashTimer: 1
 --- !u!114 &114786924175383298
 MonoBehaviour:

@@ -6,6 +6,7 @@ public class enemyBulletLogic : MonoBehaviour {
 
     public float speed;
     Rigidbody2D rb2d;
+    public int damage;
 	// Use this for initialization
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
@@ -27,6 +28,6 @@ public class enemyBulletLogic : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponent<health>().takeDamage(10);
+        collision.GetComponent<health>().takeDamage(damage);
     }
 }

@@ -53,4 +53,14 @@ public class health : MonoBehaviour {
 
 
     }
+
+    void pickup()
+    {
+        System.Random ran = new System.Random();
+        int chance = ran.Next(0, 16);
+        switch(chance)
+        {
+            //spawn powerups
+        }
+    }
 }
