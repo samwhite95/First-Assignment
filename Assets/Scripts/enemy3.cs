@@ -7,6 +7,7 @@ public class enemy3 : MonoBehaviour {
     float x;
     float y;
     public Vector2 coords;
+    GameObject spawner;
 
     float timer;
     public float movespeed;
@@ -21,12 +22,13 @@ public class enemy3 : MonoBehaviour {
         rnd = new System.Random();
         coords = new Vector2(0, 0);
         timer = Time.time;
-        
+        spawner = GameObject.FindWithTag("spawn");
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if(Time.time > (timer + movespeed))
+		if(Time.time > (timer + movespeed + 1f))
         {
             generateCoords();
             startLerp();
@@ -48,8 +50,9 @@ public class enemy3 : MonoBehaviour {
 
     void generateCoords()
     {
-        x = rnd.Next(-5, 5);
-        y = rnd.Next(2, 8);
+        x = spawner.GetComponent<rng>().rngget(-4, 5);
+        y = spawner.GetComponent<rng>().rngget(2, 8);
+        
         coords.Set(x, y);
     }
 

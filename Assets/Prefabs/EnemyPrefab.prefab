@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 4554974239270064}
   - component: {fileID: 114786924175383298}
   - component: {fileID: 222472528955799130}
+  - component: {fileID: 114654926863078274}
   m_Layer: 11
   m_Name: EnemyPrefab
   m_TagString: Untagged
@@ -132,6 +133,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 6
   flashTimer: 1
+--- !u!114 &114654926863078274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444029067614292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05414e836e25074fae5d2afacabe6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 0
+  flashTimer: 0
 --- !u!114 &114786924175383298
 MonoBehaviour:
   m_ObjectHideFlags: 1
