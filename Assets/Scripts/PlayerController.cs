@@ -14,8 +14,43 @@ public class PlayerController : MonoBehaviour {
     private float lastShot = 0f;
 	float moveVertical;
 	float moveHorizontal;
-    
+    float powertimer;
+    public float powerDuration;
+    public int damage;
+    public bool damageUP = false;
+    public bool fireUP = false;
+    public float fireRate;
+    public bool speedUP = false;
 
+    public void powerUP(string which)
+    {
+        switch(which)
+        {
+            case "1up(Clone)":
+                GetComponent<health>().lives++;
+                break;
+            case "dmg(Clone)":
+                damage = 5;
+                damageUP = true;
+                powertimer = Time.time;
+                break;
+            case "fireup(Clone)":
+                fireSpeed = 0.05f;
+                fireUP = true;
+                powertimer = Time.time;
+                break;
+            case "heal(Clone)":
+                GetComponent<health>().HP += 50;
+                break;
+            case "speed(Clone)":
+                speed = 20;
+                speedUP = true;
+                powertimer = Time.time;
+                break;
+
+
+        }
+    }
 
     void fire()
     {
@@ -84,7 +119,32 @@ public class PlayerController : MonoBehaviour {
         {
             fire();
         }
-		
+        if(damageUP)
+        {
+            if (Time.time >= powertimer + powerDuration)
+            {
+                damage = 1;
+                damageUP = false;
+            }
+        }
+
+        if(fireUP)
+        {
+            if(Time.time >= powertimer + powerDuration)
+            {
+                fireSpeed = 0.1f;
+                fireUP = false;
+            }
+        }
+
+        if(speedUP)
+        {
+            if (Time.time >= powertimer + powerDuration)
+            {
+                speed = 10;
+                speedUP = false;
+            }
+        }
 		checkBounds();		
     }
 

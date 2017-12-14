@@ -137,7 +137,8 @@ MonoBehaviour:
   fireup: {fileID: 1999242446345284, guid: eb55f703853b06e49aa41d34b20b2133, type: 2}
   heal: {fileID: 1244523304342904, guid: c2407dc9f3b618643a9fe6edd65faeb9, type: 2}
   speed: {fileID: 1230989565769996, guid: e9d84d9776bfdd54a93e9d6077de7846, type: 2}
-  percentagePowerUp: 0
+  percentagePowerUp: 4
+  lives: 0
 --- !u!114 &114273927878941522
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assessment.unity
     guid: ab25c222b0d1d2d4fa8f034cb8083473
+  - enabled: 1
+    path: Assets/level2.unity
+    guid: fd13d668be08b9642be14db3c598444b

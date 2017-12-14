@@ -209,7 +209,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1444029067614292, guid: c61d25f27d88eec4c8716d811d371871, type: 2}
   enemy2: {fileID: 1444029067614292, guid: 3e5fdfb8a6c1d2042ab7ef5a53a6a9a9, type: 2}
-  enemyText: {fileID: 0}
   currentShips: 0
   waveNum: 1
   maxShips: 9
@@ -320,8 +319,8 @@ Canvas:
   m_GameObject: {fileID: 542602824}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1811565643}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -329,7 +328,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1901809973
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &542602828
@@ -339,8 +338,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 542602824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 177.5, y: 276, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.029562045, y: 0.029562045, z: 0.029562045}
   m_Children:
   - {fileID: 1990318977}
   m_Father: {fileID: 0}
@@ -644,6 +643,9 @@ MonoBehaviour:
   firepoint2: {fileID: 2050774516}
   whichGun: 0
   fireSpeed: 0.1
+  powerDuration: 0
+  damage: 0
+  fireRate: 0.2
 --- !u!60 &1684857326
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -712,6 +714,7 @@ GameObject:
   - component: {fileID: 1811565642}
   - component: {fileID: 1811565641}
   - component: {fileID: 1811565640}
+  - component: {fileID: 1811565645}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -748,7 +751,7 @@ Camera:
   m_GameObject: {fileID: 1811565639}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -788,6 +791,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1811565645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1811565639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750bcd95d97611f4cb812511c223e493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1860877038
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,7 +855,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1990318976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -173.84, y: -278.07, z: 0}
+  m_LocalPosition: {x: -156.14285, y: -274, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 542602828}
@@ -849,8 +863,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 3.66, y: -2.07}
-  m_SizeDelta: {x: 160, y: 46.68}
+  m_AnchoredPosition: {x: 20, y: 0}
+  m_SizeDelta: {x: 160, y: 46.679993}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1990318978
 MonoBehaviour:

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class shipSpawner : MonoBehaviour {
     
@@ -43,6 +44,9 @@ public class shipSpawner : MonoBehaviour {
 
             case 3:
                 wave3();
+                break;
+            case 4:
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 break;
         }
         

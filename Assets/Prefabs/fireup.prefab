@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212708010440772808}
   - component: {fileID: 114278015631229022}
   - component: {fileID: 50203966680085022}
-  m_Layer: 0
+  - component: {fileID: 58023330228502724}
+  m_Layer: 12
   m_Name: fireup
-  m_TagString: Untagged
+  m_TagString: powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,6 +63,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58023330228502724
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999242446345284}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
 --- !u!114 &114278015631229022
 MonoBehaviour:
   m_ObjectHideFlags: 1

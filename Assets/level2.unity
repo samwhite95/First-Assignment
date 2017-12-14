@@ -220,7 +220,7 @@ MonoBehaviour:
   enemy: {fileID: 1484917313397424, guid: a3be282e1291a6d4296911ff65d7ed19, type: 2}
   enemy2: {fileID: 1508104088268664, guid: c150155afa1c5ad49bd3dde0ebccdcfb, type: 2}
   currentShips: 0
-  waveNum: 3
+  waveNum: 1
   maxShips: 8
   counter: 0
   spawnRate: 1
@@ -263,7 +263,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 626284476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -173.84, y: -278.07, z: 0}
+  m_LocalPosition: {x: -156.14285, y: -274, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2022525221}
@@ -271,7 +271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 3.66, y: -2.07}
+  m_AnchoredPosition: {x: 20, y: 0}
   m_SizeDelta: {x: 160, y: 46.68}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &626284478
@@ -309,7 +309,7 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 857025273}
   - component: {fileID: 857025272}
   - component: {fileID: 857025271}
+  - component: {fileID: 857025276}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -412,6 +413,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &857025276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857025270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750bcd95d97611f4cb812511c223e493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1087393826
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +593,12 @@ MonoBehaviour:
   firepoint2: {fileID: 1087393827}
   whichGun: 0
   fireSpeed: 0.1
+  powerDuration: 10
+  damage: 1
+  damageUP: 0
+  fireUP: 0
+  fireRate: 0
+  speedUP: 0
 --- !u!212 &1376182023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -763,8 +781,8 @@ Canvas:
   m_GameObject: {fileID: 2022525217}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 857025274}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -772,7 +790,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1901809973
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &2022525221
@@ -782,8 +800,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2022525217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 177.5, y: 276, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.029562045, y: 0.029562045, z: 0.029562045}
   m_Children:
   - {fileID: 626284477}
   m_Father: {fileID: 0}
