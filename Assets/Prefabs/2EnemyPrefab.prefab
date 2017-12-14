@@ -132,6 +132,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   flashTimer: 1
+  up1: {fileID: 1358851303392478, guid: f22fe50d9591a804cb752e98ee8f0ef3, type: 2}
+  dmg: {fileID: 1560837561650848, guid: 9d996ec8d172fd441b87dc5598875fd0, type: 2}
+  fireup: {fileID: 1999242446345284, guid: eb55f703853b06e49aa41d34b20b2133, type: 2}
+  heal: {fileID: 1244523304342904, guid: c2407dc9f3b618643a9fe6edd65faeb9, type: 2}
+  speed: {fileID: 1230989565769996, guid: e9d84d9776bfdd54a93e9d6077de7846, type: 2}
+  percentagePowerUp: 0
 --- !u!114 &114273927878941522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flyspeed: 7
-  fireSpeed: 1
+  fireSpeed: 0.8
   projectile: {fileID: 1549279993717792, guid: b736f85ee6168f14fa79e606f66b8479, type: 2}
 --- !u!212 &212219820286053262
 SpriteRenderer:

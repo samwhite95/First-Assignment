@@ -50,7 +50,7 @@ public class shipSpawner : MonoBehaviour {
 
     void spawnShips(GameObject ship, int max, float rate, ref int count)
     {
-        if ((Time.time > rate + lastSpawn) && count <= max)
+        if ((Time.time > rate + lastSpawn) && count < max)
         {
             Instantiate(ship, transform.position, transform.rotation);
             lastSpawn = Time.time;
@@ -64,7 +64,7 @@ public class shipSpawner : MonoBehaviour {
     {
         spawnShips(enemy, maxShips, spawnRate, ref counter);
 
-        if (currentShips == 0 && counter > 0)
+        if (currentShips == 0 && counter == maxShips)
         {
             waveNum++;
             counter = 0;
@@ -75,7 +75,7 @@ public class shipSpawner : MonoBehaviour {
     {
         spawnShips(enemy2, maxShips2, spawnRate2, ref counter2);
 
-        if (currentShips == 0 && counter2 > 0)
+        if (currentShips == 0 && counter2 == maxShips2)
         {
             waveNum++;
             counter2 = 0;

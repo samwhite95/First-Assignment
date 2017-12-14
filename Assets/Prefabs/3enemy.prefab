@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4108109996755688}
   - component: {fileID: 212567273008068672}
   - component: {fileID: 114340721329566006}
+  - component: {fileID: 114604386945777754}
   m_Layer: 0
   m_Name: 3enemy
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484917313397424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0722654, y: -4.332049, z: 0}
+  m_LocalPosition: {x: -4.0876412, y: -8.124625, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,6 +60,19 @@ MonoBehaviour:
   timesince: 0
   timestart: 0
   percent: 0
+--- !u!114 &114604386945777754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484917313397424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05414e836e25074fae5d2afacabe6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 14
+  flashTimer: 1
 --- !u!212 &212567273008068672
 SpriteRenderer:
   m_ObjectHideFlags: 1
