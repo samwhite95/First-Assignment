@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     private float lastShot = 0f;
 	float moveVertical;
 	float moveHorizontal;
+    
 
 
     void fire()

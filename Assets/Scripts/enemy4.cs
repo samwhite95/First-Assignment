@@ -27,8 +27,7 @@ public class enemy4 : MonoBehaviour {
         timer = Time.time;
         spawner = GameObject.FindWithTag("spawn");
         generateCoords();
-        transform.position = coords;
-
+        
     }
 
     // Update is called once per frame

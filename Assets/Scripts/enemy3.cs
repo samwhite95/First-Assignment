@@ -17,6 +17,11 @@ public class enemy3 : MonoBehaviour {
     public float timestart;
     public float percent;
 
+    public float fireSpeed;
+    private float lastShot = 0f;
+    public GameObject projectile;
+    Quaternion zero = new Quaternion(0, 0, 0, 0);
+
     // Use this for initialization
     void Start () {
         rnd = new System.Random();
@@ -28,6 +33,9 @@ public class enemy3 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        fire();
+
 		if(Time.time > (timer + movespeed + 1f))
         {
             generateCoords();
@@ -61,5 +69,14 @@ public class enemy3 : MonoBehaviour {
         isLerping = true;
         startPos = transform.position;
         timestart = Time.time;
+    }
+    void fire()
+    {
+        if (Time.time > fireSpeed + lastShot)
+        {
+
+            Instantiate(projectile, transform.position, zero);
+            lastShot = Time.time;
+        }
     }
 }

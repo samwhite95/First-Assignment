@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class health : MonoBehaviour {
 
@@ -16,13 +17,17 @@ public class health : MonoBehaviour {
     Quaternion up;
     public int lives;
     int hp2;
+    string sceneName;
+    Scene currentScene;
 
     // Use this for initialization
     void Start () {
 
         spawner = GameObject.FindWithTag("spawn");
         hp2 = HP;
-	}
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -45,9 +50,21 @@ public class health : MonoBehaviour {
                 {
                     if (spawner != null)
                     {
-                        spawner.GetComponent<shipSpawner>().currentShips--;
+                        if(sceneName == "Assessment")
+                        {
+                            spawner.GetComponent<shipSpawner>().currentShips--;
+                        }
+                        if(sceneName == "level2")
+                        {
+                            spawner.GetComponent<spawnerlvl2>().currentShips--;
+                            
+                        }
+                        
                     }
-                    Destroy(transform.parent.gameObject);
+                    if (transform.parent != null)
+                    {
+                        Destroy(transform.parent.gameObject);
+                    }
                 }
 
 

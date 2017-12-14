@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212567273008068672}
   - component: {fileID: 114340721329566006}
   - component: {fileID: 114604386945777754}
-  m_Layer: 0
+  - component: {fileID: 60656364967743904}
+  m_Layer: 11
   m_Name: 3enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,12 +37,42 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484917313397424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.0876412, y: -8.124625, z: 0}
+  m_LocalPosition: {x: 1.0900445, y: 3.8165412, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60656364967743904
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484917313397424}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.13603666, y: 0.10607259}
+      - {x: -0.1367855, y: 0.03298537}
+      - {x: -0.019241095, y: -0.12652063}
+      - {x: 0.01247569, y: -0.12572591}
+      - {x: 0.14052984, y: 0.036693893}
+      - {x: 0.13862972, y: 0.10453892}
 --- !u!114 &114340721329566006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -60,6 +91,8 @@ MonoBehaviour:
   timesince: 0
   timestart: 0
   percent: 0
+  fireSpeed: 2.5
+  projectile: {fileID: 1549279993717792, guid: d22065707a3be004abd0c84ca20f129a, type: 2}
 --- !u!114 &114604386945777754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,6 +106,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 14
   flashTimer: 1
+  up1: {fileID: 0}
+  dmg: {fileID: 0}
+  fireup: {fileID: 0}
+  heal: {fileID: 0}
+  speed: {fileID: 0}
+  percentagePowerUp: 0
+  lives: 0
 --- !u!212 &212567273008068672
 SpriteRenderer:
   m_ObjectHideFlags: 1
