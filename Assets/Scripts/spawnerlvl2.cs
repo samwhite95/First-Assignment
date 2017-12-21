@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class spawnerlvl2 : MonoBehaviour {
     float lastSpawn = 0;
@@ -45,6 +46,10 @@ public class spawnerlvl2 : MonoBehaviour {
                 wave3();
                 swapships = !swapships;
                 break;
+            case 4:
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                break;
+
         }
 
     }
