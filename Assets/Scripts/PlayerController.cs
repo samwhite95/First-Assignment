@@ -93,10 +93,17 @@ public class PlayerController : MonoBehaviour {
 	
 	void movePlayer()
 	{
+        #if UNITY_STANDALONE || UNITY
 		moveVertical = Input.GetAxis("Vertical");
         moveHorizontal = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         rb2d.velocity = (movement * speed);
+        #else
+        if(Input.touchCount > 0)
+        {
+            Vector3 pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 5));
+            transform.position = pos;
+        }
 	}
 
     
@@ -115,6 +122,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
+
         if (Input.GetButton("Fire1"))
         {
             fire();
